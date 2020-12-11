@@ -1,0 +1,60 @@
+$primaryColor: rgb(12, 12, 12);
+$secondaryColor: rgb(24, 23, 23);
+$fontColor: White;
+$fontsize: 2rem;
+
+body {
+  background-color: $secondaryColor;
+}
+
+.search-box {
+  width: 100vw;
+  margin: 0 0 75px;
+
+  .search-bar {
+    display: block;
+    width: 50vw;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+
+    background-color: $primaryColor;
+    border-radius: 0px 0px 16px 16px;
+    margin-top: 10px;
+
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+    color: $fontColor;
+    font-size: $fontsize;
+
+    transition: 0.4s ease;
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: $primaryColor;
+
+  .textbox {
+    padding: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: $fontColor;
+    font-size: $fontsize;
+  }
+
+  .textbox2 {
+    padding: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: $fontColor;
+    font-size: $fontsize;
+  }
+}
