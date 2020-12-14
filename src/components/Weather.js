@@ -39,37 +39,39 @@ const Weather = () => {
         />
       </div>
       {typeof weather.main != "undefined" ? (
-        <div>
+        <main>
           <div className="container">
-            <div className="textbox">
+            <h1 className="textbox">
               Fucking {weather.name}, {weather.sys.country}
-            </div>
+            </h1>
           </div>
           <div className="container">
             <div className="textbox">
-              The Current Fucking Temperature:
+              <h2>The Current Fucking Temperature:</h2>
               <div className="textbox3">{Math.round(weather.main.temp)}°F</div>
             </div>
             <img
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-              alt="weatherIcon"
+              alt="Weather Icon"
             ></img>
             <div className="textbox2">
-              Fucking {weather.weather[0].main} Outside
+              <h3>Fucking {weather.weather[0].main} Outside</h3>
             </div>
             <div className="textbox4">
-              The Fucking Max: {Math.round(weather.main.temp_max)}
-              °F
+              <h3>
+                The Fucking Max: {Math.round(weather.main.temp_max)}
+                °F
+              </h3>
             </div>
             <div className="textbox4">
-              The Fucking Min: {Math.round(weather.main.temp_min)}°F
+              <h3>The Fucking Min: {Math.round(weather.main.temp_min)}°F</h3>
             </div>
           </div>
-        </div>
+        </main>
       ) : (
         <div className="container">
           <div className="textbox">
-            A fucking City and/or Country would be helpful.
+            <h1> A fucking City and/or Country would be helpful.</h1>
           </div>
         </div>
       )}
