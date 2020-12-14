@@ -35,7 +35,9 @@ const currentDate = () => {
   };
   return (
     <>
-      <div>{dateBuilder(new Date())}</div>
+      <div className="container">
+        <div className="textbox">{dateBuilder(new Date())}</div>
+      </div>
     </>
   );
 };

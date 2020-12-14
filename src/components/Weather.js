@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import dateBuilder from "./currentDate";
 import "../App.scss";
 
 const api = {
@@ -10,16 +11,19 @@ const Weather = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
-  const search = (evt) => {
-    if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
-        .then((res) => res.json())
-        .then((result) => {
-          setWeather(result);
-          setQuery("");
-          console.log(result);
-        });
-    }
+  const search = async (evt) => {
+    if (evt.key === "Enter")
+      try {
+        fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
+          .then((res) => res.json())
+          .then((result) => {
+            setWeather(result);
+            setQuery("");
+            console.log(result);
+          });
+      } catch (err) {
+        console.error();
+      }
   };
 
   return (
@@ -28,7 +32,7 @@ const Weather = () => {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search..."
+          placeholder="Where the fuck are you?"
           onChange={(e) => setQuery(e.target.value)}
           value={query}
           onKeyPress={search}
@@ -38,22 +42,38 @@ const Weather = () => {
         <div>
           <div className="container">
             <div className="textbox">
-              {weather.name}, {weather.sys.country}
+              Fucking {weather.name}, {weather.sys.country}
             </div>
           </div>
           <div className="container">
-            <div className="textbox">{Math.round(weather.main.temp)}°F</div>
-            <div className="textbox2">
-              Max: {Math.round(weather.main.temp_max)}°F Min:{" "}
-              {Math.round(weather.main.temp_min)}°F
+            <div className="textbox">
+              The Current Fucking Temperature:
+              <div className="textbox3">{Math.round(weather.main.temp)}°F</div>
             </div>
-            <div className="textbox2"></div>
-            <div className="textbox2">{weather.weather[0].main}</div>
+            <img
+              src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              alt="weatherIcon"
+            ></img>
+            <div className="textbox2">
+              Fucking {weather.weather[0].main} Outside
+            </div>
+            <div className="textbox4">
+              The Fucking Max: {Math.round(weather.main.temp_max)}
+              °F
+            </div>
+            <div className="textbox4">
+              The Fucking Min: {Math.round(weather.main.temp_min)}°F
+            </div>
           </div>
         </div>
       ) : (
-        "Please put in a Valid City and/or Country"
+        <div className="container">
+          <div className="textbox">
+            A fucking City and/or Country would be helpful.
+          </div>
+        </div>
       )}
+      <div className="textbox">{dateBuilder(new Date())}</div>
     </>
   );
 };
