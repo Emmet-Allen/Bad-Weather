@@ -1,6 +1,6 @@
-#The F!@#ing Weather
+# The F!@#ing Weather
 
-##A fun weather web app that uses Open Weather API to tell you the weather conditions of your area, including:
+## A fun weather web app that uses Open Weather API to tell you the weather conditions of your area, including:
 
 Current Temp
 Weather Conditions (Hazy, Snowing, Drizzle) with .PNG image
@@ -9,7 +9,7 @@ The Current Date
 
 Please feel free to use the Master Branch as source code for your project.
 
-##API Key Instructions
+## API Key Instructions
 
 When borrowing the source code be sure to include your own API key because the API key for this project is hidden.
 This can be done in multiple ways, but I decided to use two.
@@ -20,7 +20,7 @@ The second is using netlify environment variables to access the API through netl
 Both methods can be found within this repository. The first method can be cloned from the "Master" branch,
 while the second method can be cloned from the "Netlify-Functions" branch. 
 
-##SCSS
+## SCSS
 
 SCSS is used for styling, so if you are unfamilar with SCSS please familarize yourself so that you can fully customize. 
 
