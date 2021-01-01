@@ -24,8 +24,7 @@ while the second method can be cloned from the "Netlify-Functions" branch.
 
 SCSS is used for styling, so if you are unfamilar with SCSS please familarize yourself so that you can fully customize. 
 
-Enjoy,
-*Emmet 
+Enjoy!
 
 
 
