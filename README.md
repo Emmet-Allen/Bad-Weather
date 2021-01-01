@@ -2,10 +2,10 @@
 
 ## A fun weather web app that uses Open Weather API to tell you the weather conditions of your area, including:
 
-Current Temp
-Weather Conditions (Hazy, Snowing, Drizzle) with .PNG image
-High/Low Temps
-The Current Date
+Current Temp,
+Weather Conditions (Hazy, Snowing, Drizzle) with .PNG image,
+High/Low Temps,
+The Current Date,
 
 Please feel free to use the Master Branch as source code for your project.
 
@@ -26,7 +26,7 @@ SCSS is used for styling, so if you are unfamilar with SCSS please familarize yo
 
 Enjoy!
 
-
+<br>
 
 
 # Getting Started with Create React App
