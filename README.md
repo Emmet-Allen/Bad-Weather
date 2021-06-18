@@ -1,4 +1,4 @@
-# The F!@#ing Weather
+# The F!@#ing Weather: https://f-weather.netlify.app/
 
 ## A fun weather web app that uses Open Weather API to tell you the weather conditions of your area, including:
 
