@@ -8,6 +8,9 @@ High/Low Temps,
 The Current Date
 
 Please feel free to use the Master Branch as source code for your project.
+
+For the API Key, use a .env file to secure it so that it doesn't show when the page calling for the API info. 
+This enables you to hide your API key from others so that they don't have access to it. 
 <br>
 
 
