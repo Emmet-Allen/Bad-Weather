@@ -19,6 +19,8 @@ I created this app because I had a pebble watch that had a watch face called "NS
 the time would be told to you with numerous explitives. I really enjoyed that watchface and this is a 
 homage to that. 
 
+This App also takes advantage of the Async() and Await() functions, rather than relying on an external framework for API calls.
+
 <br>
 
 
